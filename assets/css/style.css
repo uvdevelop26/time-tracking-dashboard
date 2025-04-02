@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+    /* primary colors */
+    --purple-600: hsl(246, 80%, 60%);
+    --orange-300: hsl(15, 100%, 70%);
+    --blue-300: hsl(195, 74%, 62%);
+    --pink-400: hsl(348, 100%, 68%);
+    --green-400: hsl(145, 58%, 55%);
+    --purple-700: hsl(264, 64%, 52%);
+    --yellow-300: hsl(43, 84%, 65%);
+
+    /* neutral colors */
+    --navy-950: hsl(226, 43%, 10%);
+    --navy-900: hsl(235, 46%, 20%);
+    --purple-500: hsl(235, 45%, 61%);
+    --navy-200: hsl(236, 100%, 87%);
+
+    /* font weights */
+    --w-300: 300;
+    --w-400: 400;
+    --w-500: 500;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Rubik", sans-serif;
+    font-size: 18px;
+    background: var(--navy-950);
+    min-height: 250vh;
+    padding: 5rem 0 5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media(min-width: 1024px) {
+    body {
+        min-height: 150vh;
+        min-width: 106vw;
+    }
+}
+
+main {
+    width: 100%;
+    max-width: 70rem;
+    padding: 0 1.3rem 0 1.3rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+/* Ajustamos la altura de los hijos */
+main> :first-child {
+    height: 12.7rem;
+    /* Primer hijo más alto */
+}
+
+main>*:not(:first-child) {
+    height: 10rem;
+    /* Los demás con la misma altura */
+}
+
+@media(min-width: 768px) {
+    main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(min-width: 1024px) {
+    main {
+        padding: 4.5rem 0 0 0;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.8rem;
+    }
+
+    main> :first-child {
+        height: auto;
+        /* Primer hijo más alto */
+    }
+
+    main>*:not(:first-child) {
+        height: 15.3rem;
+        /* Los demás con la misma altura */
+    }
+
+
+}
+
+/* utilities */
+.button_reset {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+/* profile  */
+.profile {
+    background: var(--navy-900);
+    /*  height: 12.7rem; */
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.profile_header {
+    background: var(--purple-600);
+    height: 8.3rem;
+    padding: 0 0 0 2rem;
+    border-radius: 0 0 1rem 1rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.profile_header__img {
+    width: 4.3rem;
+    height: 4.3rem;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+.profile_header__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile_title {
+    color: white;
+    font-size: 15px;
+    line-height: 1.6rem;
+    font-weight: var(--w-400);
+}
+
+.profile_name {
+    display: block;
+    font-size: 22px;
+    font-weight: var(--w-300);
+    letter-spacing: .090rem;
+}
+
+.profile_nav {
+    height: 100%;
+}
+
+.profile_nav__list {
+    list-style: none;
+    display: flex;
+    padding: 1.5rem 0 0 0;
+    align-items: flex-start;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.profile_nav__button {
+    /*  color: var(--purple-500); */
+    font-size: 18px;
+    /* font-weight: var(--w-300); */
+}
+
+.selected_color {
+    color: white;
+    font-weight: var(--w-500);
+}
+
+.non_selected__color {
+    color: var(--purple-500);
+    font-weight: var(--w-300);
+}
+
+.profile_nav__button:hover {
+    color: white;
+}
+
+@media(min-width: 768px) {
+    .profile {
+        grid-column: span 2;
+    }
+}
+
+@media(min-width: 1024px) {
+    .profile {
+        grid-column: span 1;
+        grid-row: span 2;
+    }
+
+    .profile_nav {
+        height: auto;
+    }
+
+    .profile_nav__list {
+        flex-direction: column;
+        gap: 1.3rem;
+        padding: 1.5rem 0 0 2rem;
+
+    }
+
+    .profile_header {
+        height: 22rem;
+        flex-direction: column;
+        padding: 2.1rem 0 0 1.8rem;
+        align-items: start;
+        gap: 2.1rem;
+    }
+
+    .profile_header__img {
+        width: 5.2rem;
+        height: 5.2rem;
+    }
+
+    .profile_title {
+        padding: .3rem 0 0 0;
+        font-size: 15px;
+    }
+
+    .profile_name {
+        font-size: 41px;
+        line-height: 2.8rem;
+        letter-spacing: 0rem;
+    }
+
+}
+
+/* activities */
+.activities {
+    /*  height: 10rem; */
+    display: flex;
+    align-items: end;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.activities_header {
+    background: var(--navy-900);
+    padding: 1.6rem;
+    width: 100%;
+    height: 7.69rem;
+    border-radius: 1rem 1rem 0rem 0rem;
+}
+
+.activities_header__cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    color: white;
+}
+
+.activities_info {
+    padding: .5rem 0 0 0;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.activities_info__week {
+    font-size: 15px;
+    color: var(--purple-500);
+}
+
+.activities_info__time {
+    font-size: 2rem;
+}
+
+.activities_work {
+    background: var(--orange-300) url("../images/icon-work.svg") no-repeat;
+    background-position: right 1.2rem top -.5rem;
+    background-size: 5rem;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+
+.activities_play {
+    background: var(--blue-300) url("../images/icon-play.svg") no-repeat;
+    background-position: right 1.5rem top -.5rem;
+    background-size: 5rem;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.activities_pink {
+    background: var(--pink-400) url("../images/icon-study.svg") no-repeat;
+    background-position: right 1.5rem top -.5rem;
+    background-size: 5rem;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.activities_exercise {
+    background: var(--green-400) url("../images/icon-exercise.svg") no-repeat;
+    background-position: right 1.5rem top -.1rem;
+    background-size: 5rem;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.activities_social {
+    background: var(--purple-700) url("../images/icon-social.svg") no-repeat;
+    background-position: right 1rem top -.9rem;
+    background-size: 5rem;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.activities_sefcare {
+    background: var(--yellow-300) url("../images/icon-self-care.svg") no-repeat;
+    background-position: right 1rem top -.4rem;
+    background-size: 4.5rem;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+@media(min-width: 1024px) {
+
+    .activities_header {
+        height: 12.5rem;
+    }
+
+    .activities_header__cont {
+        align-items: center;
+        padding: .2rem .6rem 0 0;
+    }
+
+    .activities_info {
+        flex-direction: column;
+        align-items: start;
+        padding: 1.5rem 0 0 0;
+    }
+
+    .activities_info__time {
+        font-size: 3.50rem;
+        font-weight: var(--w-300);
+    }
+
+    .activities_info__week {
+        padding: .5rem 0 0 0;
+    }
+}

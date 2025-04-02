@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <!-- main box -->
+    <section class="profile">
+      <!-- head -->
+      <header class="profile_header">
+        <div class="profile_header__img">
+          <img src="assets/images/image-jeremy.png" alt="profile picture" />
+        </div>
+        <h1 class="profile_title">Report for
+          <span class="profile_name"> Jeremy Robson</span>
+        </h1>
+      </header>
+      <!-- time selection -->
+      <nav class="profile_nav">
+        <ul class="profile_nav__list">
+          <li class="profile_list">
+            <button type="button" class="button_reset profile_nav__button">Daily</button>
+          </li>
+          <li class="profile_list">
+            <button type="button" class="button_reset profile_nav__button">Weekly</button>
+          </li>
+          <li class="profile_list">
+            <button type="button" class="button_reset profile_nav__button">Monthly</button>
+          </li>
+        </ul>
+      </nav>
+    </section>
+    <!-- work -->
+    <div class="activities activities_work">
+      <header class="activities_header">
+        <div class="activities_header__cont">
+          <span class="activities_name">Work</span>
+          <button type="button" class="button_reset" aria-label="More options for Work">
+            <img src="assets/images/icon-ellipsis.svg" alt="options" />
+          </button>
+        </div>
+        <div class="activities_info">
+          <span class="activities_info__time"> 32hrs </span>
+          <p class="activities_info__week">Last Week - 36hrs </p>
+        </div>
+      </header>
+    </div>
+    <!--play -->
+    <div class="activities activities_play">
+      <header class="activities_header">
+        <div class="activities_header__cont">
+          <span class="activities_name">Play</span>
+          <button type="button" class="button_reset" aria-label="More options for Work">
+            <img src="assets/images/icon-ellipsis.svg" alt="options" />
+          </button>
+        </div>
+        <div class="activities_info">
+          <span class="activities_info__time"> 10hrs </span>
+          <p class="activities_info__week">Last Week - 8hrs </p>
+        </div>
+      </header>
+    </div>
+    <!-- study -->
+    <div class="activities activities_pink">
+      <header class="activities_header">
+        <div class="activities_header__cont">
+          <span class="activities_name">Study</span>
+          <button type="button" class="button_reset" aria-label="More options for Work">
+            <img src="assets/images/icon-ellipsis.svg" alt="options" />
+          </button>
+        </div>
+        <div class="activities_info">
+          <span class="activities_info__time"> 4hrs </span>
+          <p class="activities_info__week">Last Week - 7hrs </p>
+        </div>
+      </header>
+    </div>
+    <!-- exercise -->
+    <div class="activities activities_exercise">
+      <header class="activities_header">
+        <div class="activities_header__cont">
+          <span class="activities_name">Exercise</span>
+          <button type="button" class="button_reset" aria-label="More options for Work">
+            <img src="assets/images/icon-ellipsis.svg" alt="options" />
+          </button>
+        </div>
+        <div class="activities_info">
+          <span class="activities_info__time"> 4hrs </span>
+          <p class="activities_info__week">Last Week - 5hrs </p>
+        </div>
+      </header>
+    </div>
+    <!-- social -->
+    <div class="activities activities_social">
+      <header class="activities_header">
+        <div class="activities_header__cont">
+          <span class="activities_name">Social</span>
+          <button type="button" class="button_reset" aria-label="More options for Work">
+            <img src="assets/images/icon-ellipsis.svg" alt="options" />
+          </button>
+        </div>
+        <div class="activities_info">
+          <span class="activities_info__time"> 5hrs </span>
+          <p class="activities_info__week">Last Week - 10hrs </p>
+        </div>
+      </header>
+    </div>
+    <!-- self care -->
+    <div class="activities activities_sefcare">
+      <header class="activities_header">
+        <div class="activities_header__cont">
+          <span class="activities_name">Self Care</span>
+          <button type="button" class="button_reset" aria-label="More options for Work">
+            <img src="assets/images/icon-ellipsis.svg" alt="options" />
+          </button>
+        </div>
+        <div class="activities_info">
+          <span class="activities_info__time"> 2hrs </span>
+          <p class="activities_info__week">Last Week - 2hrs </p>
+        </div>
+      </header>
+    </div>
+
+  </main>
+
+
+  <script src="assets/js/main.js"></script>
+
+  <!--  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+
+</html>
