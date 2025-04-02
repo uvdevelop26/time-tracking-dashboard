@@ -1,6 +1,9 @@
 async function fetchInformation() {
     try {
-        const response = await fetch(`${window.location.origin}/time-tracking-dashboard/data.json`);
+        const direction = `${window.location.origin}/time-tracking-dashboard/data.json`
+
+        console.log(direction)
+        const response = await fetch(direction);
 
         if (!response.ok) {
             throw new Error(`Error al obtener los datos: ${response.status} ${response.statusText}`);
